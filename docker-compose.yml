@@ -3,7 +3,7 @@ services:
   bot:
     build: .
     environment:
-      - SLACK_API_TOKEN=xoxb-284098625314-VfO8cesEhlDyHEuuCHIJnLU2
+      - SLACK_API_TOKEN
     command: bundle exec ruby hal.rb
     volumes:
       - .:/code
