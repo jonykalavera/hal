@@ -4,9 +4,22 @@ services:
     build: .
     environment:
       - SLACK_API_TOKEN
+<<<<<<< HEAD
       - RAILS_ENV
     command: /code/bin/rails server
     volumes:
       - .:/code
+=======
+    command: bundle exec ruby bot.rb
+    volumes:
+      - .:/code
+  web:
+    build: .
+    environment:
+      - RAILS_ENV
+    command: /code/bin/rails server
+    volumes:
+      - .:/code
+>>>>>>> ff6a494027cdfcaf1c1546cc63427bb7f56dd61f
     ports:
       - "3000:3000"

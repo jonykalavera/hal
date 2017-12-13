@@ -27,3 +27,8 @@ To attatch to a container use the following command:
 ```
 docker exec -i -t hal_web_1 /bin/bash
 ```
+
+To attatch to a container use the following command:
+```
+docker exec -i -t hal_bot_1 /bin/bash
+```
