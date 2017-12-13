@@ -1,0 +1,22 @@
+<h1>Listing Log Entries</h1>
+ <%= link_to 'New log entry', new_log_entry_path %>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @log_entries.each do |log_entry| %>
+    <tr>
+      <td><%= log_entry.for_date %></td>
+      <td><%= log_entry.user %></td>
+      <td><%= log_entry.text %></td>
+      <td><%= link_to 'Show', log_entry_path(log_entry) %></td>
+      <td><%= link_to 'Edit', edit_log_entry_path(log_entry) %></td>
+      <td><%= link_to 'Destroy', log_entry_path(log_entry),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
